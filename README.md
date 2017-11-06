@@ -17,11 +17,11 @@ To complete this project the following technologies will be implemented:
 
 # Contents of this repository
 /  
-  index.php - Main index page of the project.   
-  Mockups/ - HTML or Image mockups of what the site should look like or how it should function  
-    mockup.html - The basic mockup of the main index of the site  
-    style.css - The stylesheet for mockup.html  
-  CSS/ - CCS files for entire project  
-  JS/ - JavaScript files for entire project  
-  LIB/ - PHP libraries  
-  DB/ - Database templates for recreating the database format locally  
+&nbsp;&nbsp;&nbsp;&nbsp;index.php - Main index page of the project.   
+&nbsp;&nbsp;&nbsp;&nbsp;Mockups/ - HTML or Image mockups of what the site should look like or how it should function  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mockup.html - The basic mockup of the main index of the site  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style.css - The stylesheet for mockup.html  
+&nbsp;&nbsp;&nbsp;&nbsp;CSS/ - CCS files for entire project  
+&nbsp;&nbsp;&nbsp;&nbsp;JS/ - JavaScript files for entire project  
+&nbsp;&nbsp;&nbsp;&nbsp;LIB/ - PHP libraries  
+&nbsp;&nbsp;&nbsp;&nbsp;DB/ - Database templates for recreating the database format locally  
