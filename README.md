@@ -16,12 +16,12 @@ To complete this project the following technologies will be implemented:
 * MySQL (or similar database)
 
 # Contents of this repository
-/
-  index.php - Main index page of the project. 
-  Mockups/ - HTML or Image mockups of what the site should look like or how it should function
-    mockup.html - The basic mockup of the main index of the site
-    style.css - The stylesheet for mockup.html
-  CSS/ - CCS files for entire project
-  JS/ - JavaScript files for entire project
-  LIB/ - PHP libraries
-  DB/ - Database templates for recreating the database format locally
+/  
+  index.php - Main index page of the project.   
+  Mockups/ - HTML or Image mockups of what the site should look like or how it should function  
+    mockup.html - The basic mockup of the main index of the site  
+    style.css - The stylesheet for mockup.html  
+  CSS/ - CCS files for entire project  
+  JS/ - JavaScript files for entire project  
+  LIB/ - PHP libraries  
+  DB/ - Database templates for recreating the database format locally  
