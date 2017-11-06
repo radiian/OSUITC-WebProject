@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>OSU IT Club</title>
+		<link rel="stylesheet" href="style.css">
+		<script>
+			function getStatus() {
+				//console.log("getting status");
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("server-status").innerHTML = this.responseText;
+					}
+				};
+				xhttp.open("GET", "status.php", true);
+				xhttp.send();
+			}
+			
+			getStatus();
+			window.setInterval(getStatus, 5000);
+			
+			//window.onload = getStatus;//Get the status when the page loads
+		</script>
+	</head>
+	
+	<body>
+		<header class="gateway-header">
+			<h1>OSU IT Club</h1>
+		</header>
+		<div class="document-tree-container">
+			<a href="index.html">Home</a>/<a href="forum.html">Forum</a>/
+		</div>
+		
+		<div class="main-container">
+			<aside class="nav-bar">
+				<div id="server-status" class="system-status">
+					<p>Hello Username</p>
+					<a href="#">Profile Settings</a>
+					<br/>
+					<a href="#">Your Posts</a>
+					<br/>					
+					<a href="#">Friends</a>
+					<br/>
+					<a href="#">Logout</a>
+				</div>
+				
+				<div class="links">
+					<a href="forum.html">Forum</a>
+					<br>
+					<a href="#">Blog</a>
+					<br>
+					<a href="#">Calendar</a>
+					<br>
+					<a href="#">SLI Web App</a>
+				</div>
+		
+			</aside>
+		
+			<div class="main-content">
+				<div id="forum-category">
+					<h3>Announcements</h3>
+					<div class="forum-announcement">
+						<a href="#">Forum Rules - Please Read!</a>
+					</div>
+					<div class="forum-announcement">
+						<a href="#">Some other important announcement!</a>
+					</div>
+				</div>
+				<div id="forum-category">
+					<h3>Official Discussion</h3>
+					<div class="forum-container">
+						<a href="#">Official discussions</a>
+					</div>
+
+					<div class="forum-container">
+						<a href="#">Officer meetings</a>
+					</div>
+
+					<div class="forum-container">
+						<a href="#">Constitution ammendments</a>
+					</div>
+				</div>
+
+				<div id="forum-category">
+					<h3>General Discussion</h3>
+					<div class="forum-container">
+						<a href="#">Topic exploration</a>
+					</div>
+
+					<div class="forum-container">
+						<a href="#">Help with projects</a>
+					</div>
+				</div>
+
+				<div id="forum-category">
+					<h3>Off Topic</h3>
+					<div class="forum-container">
+						<a href="#">Gaming</a>
+					</div>
+
+					<div class="forum-container">
+						<a href="#">Campus life</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
