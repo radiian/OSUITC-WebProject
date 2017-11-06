@@ -3,24 +3,6 @@
 	<head>
 		<title>OSU IT Club</title>
 		<link rel="stylesheet" href="style.css">
-		<script>
-			function getStatus() {
-				//console.log("getting status");
-				var xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-					document.getElementById("server-status").innerHTML = this.responseText;
-					}
-				};
-				xhttp.open("GET", "status.php", true);
-				xhttp.send();
-			}
-			
-			getStatus();
-			window.setInterval(getStatus, 5000);
-			
-			//window.onload = getStatus;//Get the status when the page loads
-		</script>
 	</head>
 	
 	<body>
