@@ -119,5 +119,23 @@ a:hover {
 	border-radius: 5px;
 }
 
+.recentblogs-container {
+	margin: 20px;
+	padding: 2px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color: blue;
+	background-color: #AAAAAA;
+}
 
+/*
+.post-title {
+	position: absolute;
+	left: 10px;
+}
 
+.post-section {
+	position: absolute;
+	right: 10px;
+}*/
