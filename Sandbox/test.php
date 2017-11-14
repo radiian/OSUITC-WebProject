@@ -14,6 +14,9 @@ echo $newstring;
 echo "<br>";
 echo "<br>";
 
-echo "For example if the above test matched, it would look like this: <br>";
-hookr($stringg);
+$html = "<div style='border-style:solid;margin:5px;'>This is one div element!</div> <div style='border-style:dashed;margin:5px;'>This is another div element!</div>";
+echo $html;
+echo "<br>";
+$nhtml = cleanr($html);
+echo $nhtml;
 ?>
