@@ -1,9 +1,11 @@
-<?php//config.default.php
+<?php
+//config.default.php
 //This file contains the default configuration for the site
 //This file will be overwritten during installation
 //This file only shows the layout of how the config file should look
 $testVar = "Hello, world!";
-$config = array();
+
+
 //MySQL settings
 $config['sql']['db_host'] = "127.0.0.1";
 $config['sql']['db_username'] = "dbuser";

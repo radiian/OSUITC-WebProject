@@ -92,7 +92,7 @@ class Context{
 	public $path;
 	public $GETVars;
 	public $POSTVars;
-	public $sessid;
+	private $sessid;
 
 	public function Context($SessionId){
 		$this->sessid = $SessionId;
