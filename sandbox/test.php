@@ -1,5 +1,5 @@
 <?php
-require_once '../LIB/core.php';
+require_once '../lib/core.php';
 echo "This page was constructed to test the hookr and cleanr functions.";
 echo "<br>";
 
