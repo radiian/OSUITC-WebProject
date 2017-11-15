@@ -68,7 +68,7 @@ class HookR{
 		else {
 			if($this->validateBaseHook($hook)){
 				$hookClass = new $hook($context);
-				$outputData = $hookClass();
+				$outputData = $hookClass->run();
 			}
 		}
 

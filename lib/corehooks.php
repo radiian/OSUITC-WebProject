@@ -30,4 +30,64 @@ class sysinfo {
 }
 
 
+//This hook handles post information
+class post{
+	public function run($context){
+		return "not a basic hook";
+	}
+
+	//Get the author of a post
+	public function author($context){
+		
+	}
+
+	public function title($context){
+
+	}
+
+	public function body($context){
+
+	}
+
+	public function date($context){
+
+	}
+
+	public function lastchanged($context){
+
+	}
+
+	public function changednote($context){
+
+	}
+
+}
+
+//This hook handles user information
+class user{
+	public function run($context){
+		return "not a basic hook";
+	}
+
+	public function name($context){
+
+	}
+
+	public function fullname($context){
+
+	}
+
+	public function id($context){
+
+	}
+
+	public function email($context){
+
+	}
+
+	public function bio($context){
+
+	}
+}
+
 ?> 
