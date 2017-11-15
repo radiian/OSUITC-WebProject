@@ -20,9 +20,10 @@ require_once 'corehooks.php';
 //
 class HookR{
 	public $hookRGX = "/\{\%[a-zA-Z_\-\>]+\}/"; //The regular expression to match all hooks
-	
+	public $layoutRGX = "/\{\&[a-zA-Z_\-\>]+\}/";//The regular expression to match all layout hooks
 
 	//Get an array of the hooks contained within $input
+	//NOTE: preg_match_all returns a multidimensional array. The results are contained in the array $_hooks[0][]
 	private function getHooks($input){
 		$_hooks;
 		//$hookCount = preg_match_all($this->hookRGX, $input, $hooks);
@@ -91,7 +92,35 @@ class HookR{
 		return $output;
 	}
 
+
+
+	//********************************************************************************
+	//                          HTML Template Parsing Functions                       
+	//********************************************************************************
 	
+
+	//Fetch a list of layoutHooks from a layout
+	//NOTE: preg_match_all returns a multidimensional array. The results are contained in the array $hooks[0][];
+	public function getLayoutHooks($layout){
+		$hooks;
+		preg_match_all($this->layoutRGX, $layout, $hooks);
+		return $hooks;
+	}
+
+	public function translateLayoutHook($_hook){
+		$hook = substr($_hook, 2);
+		$hook = chop($hook, "}");
+		//Should check the database for the layout based on the hook
+		
+	}
+	
+
+	public function parseLayout($layoutToParse){
+
+
+
+	}
+
 }
 
 ?>
