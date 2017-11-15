@@ -1,4 +1,7 @@
 <?php
+//corehooks.php
+require_once 'core.php';
+
 //This file contains the classes for all the core hooks
 //Each hook must consist of a class with at least one function
 //That one function must be named run() as thats what HookR expects for basic hooks

@@ -1,39 +1,7 @@
 <?php
+//core.php
 //This file contains core functions and classes for the project
 
-
-
-	//This function is used to parse data hooks
-	//It takes $input and searches for data hooks in the form of {hookname}
-	//It then searches the hook database for {hookname} and inserts the hook data
-	//Where the hook was found in the $input string.
-	//**********
-	//INPUT: A string for which hooks are to be parsed
-	//OUTPUT: A string in which hooks have been inserted and parsed
-	
-	//This function will instead be implemented as an entire class subsystem in the file hookr.php
-	/*function hookr($input){
-		$matches;
-		$regx = "/\{[a-zA-Z0-9_\-\>]+\}/";//The regex to match all characters contained within {brackets}
-		$match_count = preg_match_all($regx, $input, $matches);	
-		
-		//***BEGIN TEST***
-		
-		if($match_count == 0) echo "No matches <br>";
-		else{
-			for($i = 0; $i < $match_count; ++$i){
-				echo "Match $i: " . $matches[0][$i] . "<br>";
-			}
-		}
-		
-		//***END TEST***
-		
-		//for each match, get the appropriate data and replace it
-		for($i = 0; $i < $match_count; ++$i){
-
-		}	
-	}
-	*/
 	
 	//This function is used to remove restricted characters from user input
 	//It will remove hook characters, html, and SQL special characters to sanitize strings
@@ -76,6 +44,48 @@
 	}
 
 
+//This class holds all of the methods for communicating with the database backend
+//All queries should go through this class
+class DBCon {
+
+	private $server;
+	private $username;
+	private $pass;
+	private $dbname;
+	private $conn;
+
+	public function __construct($_server, $_user, $_pass, $_dbname){
+		$server = $_server;
+		$username = $_user;
+		$pass = $_pass;
+		$dbname = $_dbname;
+		$this->connectDB();
+	}
+
+	public function __destruct(){
+		mysqli_close($this->conn);//Close the database connection on object destruction
+	}
+
+	public function connectDB(){
+		$this->conn = mysqli_connect($this->server, $this->username, $this->pass, $this->dbname);
+		if(!$this->conn){
+			die("Fatal error. DB connection failed: " . mysqli_connect_error());
+		}
+	}
+
+	public function isConnected(){
+		if(!$this->conn) return false;
+		else return true;
+	}
+
+	public function queryDB($sql){
+		if(!$this->conn) return false;
+		else{
+			return mysqli_query($this->conn, $sql);	
+		}
+	}
+			
+}
 
 
 class Context{

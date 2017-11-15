@@ -1,11 +1,18 @@
-<?php
-require_once 'settings.php';
+<?php//config.default.php
+//This file contains the default configuration for the site
+//This file will be overwritten during installation
+//This file only shows the layout of how the config file should look
+$testVar = "Hello, world!";
+$config = array();
+//MySQL settings
+$config['sql']['db_host'] = "127.0.0.1";
+$config['sql']['db_username'] = "dbuser";
+$config['sql']['db_password'] = "verybadpass";
+$config['sql']['db_database'] = "mydatabase";
 
-$config = new Settings();
-$config->db_host = "127.0.0.1";
-$config->db_username = "dbuser";
-$config->db_password = "verybadpass";
-$config->connectDB();
-
+//General config
+$config['general']['sitename'] = "MyWebsite";
+$config['general']['title'] = "MyWebsite";
+$config['general']['rootpath'] = "";//Leave blank for the base of the web dir
 
 ?>
