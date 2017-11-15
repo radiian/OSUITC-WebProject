@@ -20,6 +20,10 @@ a:hover {
 	display: flex;
 }	
 
+.main-content {
+	flex-grow: 1;
+}
+
 .nav-bar {
 	margin: 20px;
 	padding: 10px;
@@ -30,7 +34,7 @@ a:hover {
 	background-color: white;
 	max-width: 175px;
 	min-width: 175px;
-	max-height: 218px;
+	max-height: 230px;
 	
 	
 }
@@ -49,7 +53,8 @@ a:hover {
 	white-space: nowrap;
 }
 
-section {
+#main-content,
+#forum-category {
 	margin: 20px;
 	padding: 10px 20px 10px 20px;
 	border-style: solid;
@@ -59,28 +64,46 @@ section {
 	background-color: white;
 }
 
-#main-content h4 {
+#main-content h4{
+	margin: 4px;
+}
+#forum-category h3{
 	margin: 4px;
 }
 
-#gateway-login {
-	text-decoration: none;
-	color: #00a542;
-	font-size: 250%;
-	font-weight: bold;
-	text-align: center;
-	outline: 0;
-}
-#gateway-login:active,
-#gateway-login:hover {
-	color: white;
+.forum-container {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	/*border-color: #0011a5;*/
+	border-color: black;
 }
 
-.gateway-login:active,
-.gateway-login:hover {
-	text-decoration: none;
-	background-color: #00a542;
-	border-color: black;
+.forum-announcement {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	/*border-color: #0011a5;*/
+	border-color: grey;
+}
+.forum-announcement a {
+	color: red;
+}
+.forum-announcement a:hover {
+	color: orange;
+}
+
+.forum-container a {
+	color: teal;
+}
+.forum-container a:hover {
+	color: green;
 }
 
 .document-tree-container {
@@ -96,29 +119,23 @@ section {
 	border-radius: 5px;
 }
 
-.status-green {
-	color: limegreen;
-	margin: 0;
-	padding: 0;
+.recentblogs-container {
+	margin: 20px;
+	padding: 2px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color: blue;
+	background-color: #AAAAAA;
 }
 
-.status-yellow {
-	color: #ff8000;
-	font-weight: bold;
-		margin: 0;
-	padding: 0;
+/*
+.post-title {
+	position: absolute;
+	left: 10px;
 }
 
-.status-red {
-	color: red;
-	font-weight: bold;
-	text-decoration: underline;
-		margin: 0;
-	padding: 0;
-}
-
-.status-header {
-	font-size: 20px;
-}
-
-
+.post-section {
+	position: absolute;
+	right: 10px;
+}*/

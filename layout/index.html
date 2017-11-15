@@ -3,24 +3,6 @@
 	<head>
 		<title>OSU IT Club</title>
 		<link rel="stylesheet" href="style.css">
-		<script>
-			function getStatus() {
-				//console.log("getting status");
-				var xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-					document.getElementById("server-status").innerHTML = this.responseText;
-					}
-				};
-				xhttp.open("GET", "status.php", true);
-				xhttp.send();
-			}
-			
-			getStatus();
-			window.setInterval(getStatus, 5000);
-			
-			//window.onload = getStatus;//Get the status when the page loads
-		</script>
 	</head>
 	
 	<body>
@@ -28,7 +10,7 @@
 			<h1>OSU IT Club</h1>
 		</header>
 		<div class="document-tree-container">
-			Home/
+			<a href="index.html">Home</a>/
 		</div>
 		
 		<div class="main-container">
@@ -45,7 +27,7 @@
 				</div>
 				
 				<div class="links">
-					<a href="#">Forum</a>
+					<a href="forum.html">Forum</a>
 					<br>
 					<a href="#">Blog</a>
 					<br>
@@ -57,6 +39,9 @@
 			</aside>
 		
 			<div class="main-content">
+
+				<div class="recentblogs-container">
+				<h3>Recent Blog Posts</h3>
 				<section id="main-content">
 					<h4>An official post</h4>
 					<p>This is the content of some sort of important announcement! This area will hold several of these kinds of announcements for users to see when they first access the web site. This could be anything from meeting announcements, to other information about what's going on in the club. These announcements can be stuck to the front page so they are always displayed, or left to display in a blog style so that newer posts show up on top of older posts.
@@ -69,13 +54,27 @@
 					<p>
 				</section>
 
-				<section id="main-content">
-					<h4>Again a post</h4>
-					<p>And here is another kind of thing. These are here just to fill up the page a bit to give a feeling for how this may actually look if it were a real website. But since it's not, these are just bogus information really.
-					</p>
-				</section>
 
+				</div>
+
+				<div class="recentblogs-container">
+					<h3>Recent Forum Posts</h3>
+					<section id="main-content">
+						<span class="post-title">New Forum Post</span><span class="post-section">Forum section 1</span>
+					</section>
+					<section id="main-content">
+						<span class="post-title">Test post</span> <span class="post-section">Forum section 2</span>
+					</section>
+				</div>
 			</div>
 		</div>
+		<footer class="gateway-header">
+			<div id="footer-column1">
+			This site is developed and maintained by the Information Technology Club, OSU
+			</div>
+
+			<div id="footer-column2">
+			</div>
+		</footer>
 	</body>
 </html>
