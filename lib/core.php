@@ -75,4 +75,20 @@
 		return $output;//Return the output with sanitized text 
 	}
 
+
+
+
+class Context{
+	public $path;
+	public $GETVars;
+	public $POSTVars;
+	public $sessid;
+
+	public function Context($SessionId){
+		$this->sessid = $SessionId;
+	}
+
+}
+
+
 ?>
