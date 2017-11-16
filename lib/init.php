@@ -1,7 +1,7 @@
 <?php
 //init.php
 require_once 'core.php';
-//require_once 'hookr.php';
+require_once 'hookr.php';
 //This file contains all the initializations for the core classes
 //Here the database connection is established and the main HookR class is created
 
@@ -14,12 +14,17 @@ if(!defined('DEBUG')){
 }
 else require_once 'config.default.php';
 
-//print_r(get_included_files());
 
-global $DBGlobal = new DBCon($config['sql']['db_host'], $config['sql']['db_username'], $config['sql']['db_password'], $config['sql']['db_database']);
 
-echo $config['sql']['db_host'];
-echo $testVar;
-echo "<br>";
+//Global object references for the rest of the project
+$DBGlobal = new DBCon($config['sql']['db_host'], $config['sql']['db_username'], $config['sql']['db_password'], $config['sql']['db_database']);
+
+$HKRGlobal = new HookR();
+
+$query = "CREATE TABLE users (id int(128) AUTO_INCREMENT NOT NULL PRIMARY KEY UNIQUE, username varchar(255) NOT NULL UNIQUE, email varchar(255) NOT NULL, pass varchar(255) NOT NULL, gid int(128) NOT NULL DEFAULT '1')";
+
+$DBGlobal->queryDB($query);
+
 echo "Finished init";
+
 ?>

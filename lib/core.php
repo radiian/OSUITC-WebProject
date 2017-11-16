@@ -31,13 +31,13 @@
 		$regx = "/>+/";//Sanitize >
 		$output = preg_replace($regx, "&gt;", $output);
 
-		$regx = "/\'+/"//Sanitize '
+		$regx = "/\'+/";//Sanitize '
 		$output = preg_replace($regx, "&#39;", $output);
 
-		$regx = "/\"+/"//Sanitize "
+		$regx = "/\"+/";//Sanitize "
 		$output = preg_replace($regx, "&quot;", $output);
 
-		$regx = "/\`+/"//Sanitize `
+		$regx = "/\`+/";//Sanitize `
 		$output = preg_replace($regx, "&#96;", $output);
 
 		return $output;//Return the output with sanitized text 
@@ -55,10 +55,10 @@ class DBCon {
 	private $conn;
 
 	public function __construct($_server, $_user, $_pass, $_dbname){
-		$server = $_server;
-		$username = $_user;
-		$pass = $_pass;
-		$dbname = $_dbname;
+		$this->server = $_server;
+		$this->username = $_user;
+		$this->pass = $_pass;
+		$this->dbname = $_dbname;
 		$this->connectDB();
 	}
 
@@ -84,7 +84,7 @@ class DBCon {
 			return mysqli_query($this->conn, $sql);	
 		}
 	}
-			
+	
 }
 
 
