@@ -113,7 +113,7 @@ class HookR{
 		$hook = substr($_hook, 2);
 		$hook = chop($hook, "}");
 		//Should check the database for the layout based on the hook
-		$query = "SELECT * FROM templates WHERE 'hookname' = '$hook'";
+		$query = "SELECT * FROM templates WHERE 'hook' = '$hook'";
 		$result = $DBGlobal->queryDB($query);
 	}
 	
