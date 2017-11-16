@@ -20,8 +20,4 @@ $DBGlobal = new DBCon($config['sql']['db_host'], $config['sql']['db_username'], 
 
 $LogR = new LogR($config['general']['rootpath']);
 
-//$query = "CREATE TABLE users (id int(128) AUTO_INCREMENT NOT NULL PRIMARY KEY UNIQUE, username varchar(255) NOT NULL UNIQUE, email varchar(255) NOT NULL, pass varchar(255) NOT NULL, gid int(128) NOT NULL DEFAULT '1')";
-
-
-
 ?>
