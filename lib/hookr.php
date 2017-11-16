@@ -1,6 +1,7 @@
 <?php
 require_once 'corehooks.php';
 require_once 'core.php';
+require_once 'init.php';
 //This file contains the entire hookr subsystem
 
 //The hookr subsystem takes special strings called hooks and parses
@@ -112,8 +113,8 @@ class HookR{
 		$hook = substr($_hook, 2);
 		$hook = chop($hook, "}");
 		//Should check the database for the layout based on the hook
-		//$query = "SELECT * FROM templates WHERE 'hookname' = '$hook'";
-		//$result =	
+		$query = "SELECT * FROM templates WHERE 'hookname' = '$hook'";
+		$result = $DBGlobal->queryDB($query);
 	}
 	
 
