@@ -55,7 +55,7 @@ function invalidPage(){
 	$progress = "Invalid Page";
 	$body = file_get_contents("./templates/wrongturn.html");
 	$maintemplate = insertData($maintemplate, $progress, $body);
-	echo $maintemplate;
+	//echo $maintemplate;
 }
 
 function doSQLSetup(){
@@ -63,7 +63,7 @@ function doSQLSetup(){
 	$progress = "Welcome/SQL Setup";
 	$body = file_get_contents("./templates/sqlsetup.html");
 	$maintemplate = insertData($maintemplate, $progress, $body);
-	echo $maintemplate;
+	//echo $maintemplate;
 }
 
 ?>
