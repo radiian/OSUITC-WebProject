@@ -48,8 +48,7 @@ function installSession(host, user, pass, database){
 			if(this.response == "done") {
 
 				button.className = "forward-button";
-				link.href="./?progress=sqlinstall";
-				//console.log("session has been installed");
+				link.href="./?progress=config";//Change the link on the sqlsetup page
 			}
 			else {
 				link.href = null;

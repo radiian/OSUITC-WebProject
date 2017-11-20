@@ -26,6 +26,10 @@ if(isset($_GET['progress']) || isset($_POST['progress'])){
 	switch($progressvar){
 		case 'sqlsetup': doSQLSetup();
 			break;
+		case 'config': doConfig();
+			break;
+		case 'sqlinstall': doSQLInstall();
+			break;
 		default: invalidPage();
 			break;
 	}
@@ -64,6 +68,17 @@ function doSQLSetup(){
 	$body = file_get_contents("./templates/sqlsetup.html");
 	$maintemplate = insertData($maintemplate, $progress, $body);
 	//echo $maintemplate;
+}
+
+function doConfig(){
+	global $maintemplate;
+	$progress = "Welcome/SQL Setup/General Config";
+	$body = file_get_contents("./templates/config.html");
+	$maintemplate = insertData($maintemplate, $progress, $body);
+}
+
+function doSQLInstall(){
+
 }
 
 ?>
