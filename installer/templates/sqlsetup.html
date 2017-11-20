@@ -4,21 +4,23 @@
 	<form>
 		<fieldset>
 
-			Hostname: <input type="text" value="localhost">
+			Hostname: <input id="dbhost" type="text" value="localhost"  oninput="testConnection()">
 			<br>
-			Username: <input type="text">
+			Username: <input id="dbuser" type="text"oninput="testConnection()">
 			<br>
-			Password: <input type="password">
+			Password: <input id="dbpass" type="password" oninput="testConnection()">
 			<br>
-			Database Name: <input type="text" value="mysite">
+			Database Name: <input id="dbdatabase" type="text" value="mysite" oninput="testConnection()">
+			<br>
+			<span id="testResult"></span>
 		</fieldset>
 	</form>
 
-	<a href="./?progress=sqlinstall">
-		<div id="forward-button">Continue</div>
+	<a id="sqlsetup-forward-link">
+		<div id="sqlsetup-forward-button" class="disabled-button">Continue</div>
 	</a>
 
 	<a href="./">
-		<div id="back-button">Back</div>
+		<div class="back-button">Back</div>
 	</a>
 </div>
