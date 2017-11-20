@@ -1,6 +1,6 @@
-# Community Guidelines
+# Contributing Guidelines
 
-This file contains some guidelines for working on this repo.
+This file contains some guidelines for working on this repo. These guidelines will help keep consistent code styles and ensure that all code is easy to read and understand.
 
 ### Unchanged files
 
